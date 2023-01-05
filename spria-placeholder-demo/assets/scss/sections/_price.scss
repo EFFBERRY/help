@@ -1,0 +1,205 @@
+// <!--Sc Price CSS -->
+.sc-price-area {
+    .sc-heading-area {
+        .sub_title {
+            font-size: 20px;
+            font-weight: 700;
+            font-family: $titleFont;
+        }
+    }
+    .sc-price-box {
+        background: $whiteColor;
+        box-shadow: 0 0 15px rgba(235, 227, 227, 0.16);
+        border-radius: 30px;
+        padding: 50px 0px 30px 50px;
+        position: relative;
+        overflow: hidden;
+        .sc-primary-btn {
+            margin-right: 50px;
+        }
+        .price-item {
+            .pric-title {
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .price-active {
+                color: $primaryColor;
+                font-size: 45px;
+                font-weight: 700;
+                border-bottom: 1px solid rgba($color: #4d4c4c, $alpha: 0.2);
+                margin-top: -15px;
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+                font-family: $titleFont;
+            }
+            .price {
+                color: $bodyColor;
+                font-family: $titleFont;
+            }
+            .third_color {
+                color: $thirdColor;
+                font-family: $titleFont;
+            }
+            .month {
+                font-size: 16px;
+                font-weight: 400;
+                color: $bodyColor;
+            }
+        }
+        .perfect-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .price-list {
+            margin-bottom: 20px;
+            .list {
+                li {
+                    color: $bodyColor;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 2.5;
+                    i {
+                        color: $primaryColor;
+                        margin-right: 10px;
+                    }
+                    .check {
+                        color: $bodyColor;
+                    }
+                }
+            }
+            span {
+                color: $titleColor;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        .price_sale {
+            display: table;
+            position: absolute;
+            text-align: center;
+            top: 36px;
+            right: -10px;
+            z-index: 2;
+            min-width: 100px;
+            transform: rotate(90deg);
+            &:after,
+            &:before {
+                border-style: solid;
+                position: absolute;
+                right: 13px;
+                content: "";
+                z-index: 1;
+            }
+            &:before {
+                border-color: $primaryColor transparent transparent $primaryColor;
+                border-width: 14px 18px;
+                top: 0;
+            }
+            &:after {
+                border-color: transparent transparent $primaryColor $primaryColor;
+                border-width: 14px 18px;
+                bottom: 0;
+            }
+            span {
+                position: relative;
+                background: $primaryColor;
+                color: #fff;
+                float: left;
+                font-size: 10px;
+                font-weight: 500;
+                height: 28px;
+                line-height: 28px;
+                padding: 0 10px;
+                text-align: center;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+    &.inner-price {
+        .sc-price-box {
+            box-shadow: 0 0 40px rgba(0, 0, 1, 0.05);
+        }
+    }
+    .pricing-color {
+        .pricing-monthly-btn {
+            color: $whiteColor;
+        }
+        .pricing-yearly-btn {
+            color: $whiteColor;
+        }
+        span {
+            color: $whiteColor;
+        }
+        form input {
+            background-color: $whiteColor;
+            &:before {
+                background-color: $thirdColor;
+            }
+        }
+    }
+}
+
+/*-- pricing-selector style --*/
+.pricing-selector {
+    margin-bottom: 50px;
+    width: 100%;
+    height: calc(100% - 40px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 20px;
+        button {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $titleColor;
+            border: none;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            span {
+                color: $titleColor;
+                font-weight: 600;
+            }
+        }
+    }
+    form input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 50px;
+        height: 24px;
+        border-radius: 15px;
+        background-color: $titleColor;
+        position: relative;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: $primaryColor;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+    }
+    form input:checked::before {
+        left: 30px;
+    }
+}
+.pricing-yearly {
+    display: none;
+}

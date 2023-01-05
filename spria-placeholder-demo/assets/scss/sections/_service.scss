@@ -1,0 +1,187 @@
+// <!--Sc Service CSS -->
+.sc-service-section-area {
+    .sc-service-content-box {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        padding: 40px 0;
+        border-radius: 20px;
+        position: relative;
+        border: 1px solid $primaryColor;
+        @include transition();
+        &:after,
+        &:before {
+            position: absolute;
+            background: #fff;
+            z-index: 2;
+            @include transition(0.6s);
+            content: "";
+            height: 100%;
+            left: -20px;
+            top: -20px;
+            width: 100%;
+        }
+        svg,
+        h4 {
+            position: relative;
+            z-index: 3;
+        }
+        a {
+            color: $titleColor;
+            @include transition();
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+        &:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            &:after,
+            &::before {
+                width: 0px;
+                height: 0;
+            }
+        }
+        &.gray-color {
+            &:after,
+            &:before {
+                background: #fbf8ff;
+            }
+        }
+    }
+    &.inner_service {
+        .sc-service-content-box {
+            &:after,
+            &:before {
+                background: #faf7fe;
+            }
+        }
+    }
+}
+// .sc-service-section-area2
+.sc-service-section-area2 {
+    .service-content-box {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 265px;
+            left: -145px;
+            border-top: 1px dashed #17975a;
+            top: 35px;
+        }
+        &.first-child {
+            &:before {
+                display: none;
+            }
+        }
+        .service_icon {
+            position: relative;
+            z-index: 1;
+            background: $thirdColor;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        .service_title {
+            margin-top: 20px;
+            a {
+                font-weight: 700;
+                margin-top: 20px;
+                color: $titleColor;
+                @include transition();
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+// .sc-service-section-area3
+.sc-service-section-area3 {
+    .sc-service-content-box {
+        padding: 30px 25px 5px 25px;
+        background: $whiteColor;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        border-radius: 15px;
+        @include transition();
+        .service-icon {
+            @include transition(0.6s);
+            svg {
+                path {
+                    fill: $primaryColor;
+                }
+            }
+        }
+        h4 {
+            margin-bottom: 20px;
+            a {
+                color: $titleColor;
+                margin-bottom: 20px;
+                @include transition();
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+        &:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+        &:hover {
+            .service-icon {
+                -webkit-transform: scale(-1) rotate(180deg);
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+}
+.sc-service-section-area4 {
+    .sc-service-content-box {
+        position: relative;
+        padding: 0 25px;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 10px;
+            left: -46px;
+            width: 65px;
+            height: 18px;
+            background: url(../images/icons/work_shape.png);
+        }
+        &.service_frame {
+            &:first-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        .service_icon {
+            position: relative;
+            margin-bottom: 55px;
+
+            &:before {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                content: "";
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                background: url(../images/icons/work_frame.png);
+                transform: translateX(-50%);
+            }
+            svg {
+                position: relative;
+                z-index: 3;
+                @include transition(0.6s);
+            }
+        }
+        &:hover {
+            svg {
+                -webkit-transform: scale(-1) rotate(180deg);
+                transform: scale(-1) rotate(180deg);
+            }
+        }
+    }
+}
